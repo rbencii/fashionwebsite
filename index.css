@@ -21,7 +21,7 @@ body {
 .menu a {
   text-decoration: none;
   background: linear-gradient(60deg, #d9ed92, #99d98c, #52b69a, #168aad, #184e77);
-  background-size: 70% 18%;
+  background-size: 70% 15%;
   background-position-y: 86%;
   background-repeat: no-repeat;
   color: white;
@@ -29,5 +29,12 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 8vh;
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 0vw;
   position: relative;
+}
+.menu a:hover {
+  background-size: 100% 100%;
+  color: black;
+  transition: background-size 0.5s, color 1s;
 }/*# sourceMappingURL=index.css.map */
