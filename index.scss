@@ -1,3 +1,7 @@
+:root {
+    --br: 67% 33% 69% 31% / 65% 44% 56% 35%;
+  }
+
 body{
     margin: 0px;
     padding: 0px;
@@ -16,27 +20,59 @@ body{
 .menu{
     display: flex;
     flex-flow: column;
-    gap: 0.5vh;
-
+    gap: 0%;
+    padding: 0px;
+    background: linear-gradient(180deg,#264653, #2a9d8f, #e9c46a, #f4a261, #e76f51);
+    background-size: 3% 0%;
+    background-position-x: 3.7%;
+    background-repeat: no-repeat;
+    width: 400px;
+    
     a{
         text-decoration: none;
         background: linear-gradient(60deg,#d9ed92,#99d98c,#52b69a,#168aad,#184e77);
-        background-size: 70% 15%;
+        background-size: 0% 15%;
         background-position-y: 86%;
         background-repeat: no-repeat;
+        border-radius: 0;
         color: white;
         width: fit-content;
-        font-size: 8vh;
-        //font-family: 'DynaPuff', cursive;
-        font-family: 'Dancing Script', cursive;
+        overflow: hidden;
+        opacity: 0;
+        font-size: 6vh;
+        //font-family: 'Lexend Tera', sans-serif;
+        font-family: 'DynaPuff', cursive;
+        //font-family: 'Dancing Script', cursive;
+        background-position-x: 0.4em;
+        padding: 0.1em 0.4em;
         letter-spacing: 0vw;
-        position: relative;
+        transition: background-position-x 0.5s, background-position-y 0.5s, background-size 0.5s, color 1s, border-radius 2s ease-in, border 0.3s;
+        span{
+            span{
+                display: inline-block;
+                line-height: 1em;
+            }
+        }
+
     }
 
     a:hover{
         background-size: 100% 100%;
-        color: black;
-        transition: background-size 0.5s, color 1s;
+        border-radius: var(--br);
+        border: 2px solid white;
+        background-position-x: 0;
+        //color: #264653;
+        //mix-blend-mode: difference;
+        transform: translate3d(0,0,200px);
+        transition: border 2.6s, background-position-x 0.5s, background-size 0.5s, color 1s, border-radius 0.8s ease-out;
+        
+
+        span{
+            color: white;
+            max-width: 50%;
+            mix-blend-mode:difference;
+            
+        }
     }
 
     // a::before {
