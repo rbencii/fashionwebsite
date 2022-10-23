@@ -17,6 +17,7 @@
     <title>Fashion website</title>
 </head>
 <body>
+   
     <div class="content">
         <nav class="menu">
             
@@ -27,9 +28,28 @@
             <a href="#">Slippers</a>
             <a href="#">Boots</a>
             <a href="#">Crocs</a>
+            <input type="range" name="slider" id="sliderblur" min="0" max="30" value="24">
+            <input type="range" name="slider" id="slidercontrast" min="0" max="40" value="16">
+            <input type="range" name="slider" id="sliderbrightness" min="-30" max="0" value="-8">
         </nav>
+        <canvas id="canvas">
+        </canvas>
         
+            
     </div>
+    
+        
+    </canvas>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="fancy-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -8" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+     
+        </defs>
+      </svg>
     <script src="charming-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
