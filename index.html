@@ -47,6 +47,11 @@
                 <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -8" result="goo" />
                 <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
             </filter>
+            <filter id="fancy-goo2">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 23 -10" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
      
         </defs>
       </svg>

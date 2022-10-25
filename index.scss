@@ -24,6 +24,7 @@ body{
     //filter: url('#fancy-goo');
     z-index: 1;
     a{
+        
         text-decoration: none;
         background: linear-gradient(60deg,#d9ed92,#99d98c,#52b69a,#168aad,#184e77);
         background-size: 50% 15%;
@@ -47,13 +48,13 @@ body{
     a:hover{
         background-size: 100% 100%;
         border-radius: var(--br);
-        border: 2px solid white;
+        //border: 2px solid white;
         background-position-x: 0;
         //color: #264653;
         //mix-blend-mode: difference;
         transform: translate3d(0,0,200px);
         transition: border 2.6s, background-position-x 0.5s, background-size 0.5s, color 1s, border-radius 0.8s ease-out;
-        
+        filter: url('#fancy-goo2');
 
         span{
             color: white;

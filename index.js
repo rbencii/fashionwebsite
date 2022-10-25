@@ -15,6 +15,14 @@ a.forEach((item,index) => {
     "linear-gradient(60deg, #f4a261, #ffc89c )",
     "linear-gradient(60deg, #e76f51, #ffa58f )"][index+1];
     item.style.setProperty('--br', `${num1}% ${100-num1}% ${num2}% ${100-num2}% / ${num3}% ${num4}% ${100-num4}% ${100-num3}%`);
+
+    item.addEventListener('mousemove', (e)=>{
+        
+        console.log((e.currentTarget.offsetLeft+e.currentTarget.offsetWidth/2-e.clientX)/e.currentTarget.getBoundingClientRect().width);
+
+        
+    })
+
     item.addEventListener('mouseleave', (e) => {
     
         blobs.push(new Blob(e.clientX, e.clientY, 50, ["#527685",
@@ -23,7 +31,6 @@ a.forEach((item,index) => {
         "#ffc89c",
         "#ffa58f"][index+1], -(e.target.offsetLeft+e.target.offsetWidth/2.0-e.clientX)/20.0, -(e.target.offsetTop+e.target.offsetHeight/2.0-e.clientY)/10.0));
     
-        //console.log('e.clientX' + e.clientX, ' e.clientY' + e.clientY)
     });
 }
 );
@@ -102,6 +109,8 @@ blobs.push(new Blob(100, 100, 50, randomColor()));
 let lastTime = 0;
 let deltaTime = 0;
 function animate() {
+    document.querySelector('#canvas').width=window.innerWidth;
+document.querySelector('#canvas').height=window.innerHeight;
     time = performance.now();
     deltaTime = time - lastTime;
     lastTime = time;
