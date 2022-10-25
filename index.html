@@ -21,21 +21,23 @@
     <div class="content">
         <nav class="menu">
             
-            <a href="#">Balaclavas</a>
+            <a href="#">Apple</a>
             <!-- <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#FF0066" d="M25.4,-38.8C37.1,-32,53.7,-32,66.6,-24.4C79.5,-16.7,88.8,-1.3,85.3,11.2C81.9,23.7,65.7,33.3,51.5,38.2C37.3,43.1,25,43.3,14.6,43.5C4.2,43.7,-4.4,43.9,-18.2,46.8C-32,49.6,-50.9,55.1,-60.3,49.4C-69.6,43.7,-69.3,26.8,-68.5,11.8C-67.7,-3.3,-66.4,-16.5,-63.4,-31.4C-60.4,-46.2,-55.7,-62.8,-44.8,-70C-34,-77.2,-17,-75,-5.1,-67.1C6.8,-59.2,13.7,-45.6,25.4,-38.8Z" transform="translate(100 100)" />
               </svg> -->
-            <a href="#">Slippers</a>
-            <a href="#">Boots</a>
-            <a href="#">Crocs</a>
+            <a href="#">Banana</a>
+            <a href="#">Blueberry</a>
+            <a href="#">Kiwi</a>
             <input type="range" name="slider" id="sliderblur" min="0" max="30" value="24">
             <input type="range" name="slider" id="slidercontrast" min="0" max="40" value="16">
             <input type="range" name="slider" id="sliderbrightness" min="-30" max="0" value="-8">
         </nav>
+        <div class="image">
+            <img src="can.png" alt="" id="img1">  
+            <img src="can.png" alt="" id="img2">  
+        </div>
         <canvas id="canvas">
-        </canvas>
-        
-            
+        </canvas>  
     </div>
     
         
@@ -43,9 +45,9 @@
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
             <filter id="fancy-goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="blur" />
-                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 16 -8" result="goo" />
-                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -16" result="goo" />
+                <!-- <feComposite in="SourceGraphic" in2="goo" operator="atop"/> -->
             </filter>
             <filter id="fancy-goo2">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />

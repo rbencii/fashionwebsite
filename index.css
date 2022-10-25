@@ -14,7 +14,7 @@ body {
   position: absolute;
   justify-content: center;
   align-items: center;
-  background: rgb(20, 20, 20);
+  background: radial-gradient(#d9ed92, #99d98c, #52b69a, #168aad, #184e77);
 }
 
 .menu {
@@ -42,6 +42,9 @@ body {
   letter-spacing: 0vw;
   transition: background-position-x 0.5s, background-position-y 0.5s, background-size 0.5s, color 1s, border-radius 2s ease-in, border 0.3s;
 }
+.menu input {
+  display: none;
+}
 .menu a:hover {
   background-size: 100% 100%;
   border-radius: var(--br);
@@ -61,4 +64,17 @@ body {
   height: 100%;
   position: absolute;
   filter: url("#fancy-goo");
+}
+
+.image {
+  position: relative;
+}
+
+#img2 {
+  position: absolute;
+  opacity: 0.4;
+  left: 8px;
+  top: 0px;
+  mix-blend-mode: overlay;
+  filter: blur(2px);
 }/*# sourceMappingURL=index.css.map */
