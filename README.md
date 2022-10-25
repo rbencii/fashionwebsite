@@ -1,5 +1,5 @@
-# fashionwebsite
+# brand website
 
-https://rbencii.github.io/fashionwebsite/
+https://rbencii.github.io/websiteexperiments
 
 WIP
